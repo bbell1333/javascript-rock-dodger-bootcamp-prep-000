@@ -80,7 +80,7 @@ function createRock(x) {
     if (checkCollision(rock)){
       endGame();
     }else if(top < 400){
-      top = top + 2;
+      window.requestAnimationFrame(step);
        /**
      * Otherwise, if the rock hasn't reached the bottom of
      * the GAME, we want to move it again.
@@ -106,7 +106,7 @@ function createRock(x) {
     }
   }
  
-  window.requestAnimationFrame(step)
+  window.requestAnimationFrame(step);
 }
 
   // Add the rock to ROCKS so that we can remove all rocks
