@@ -89,7 +89,7 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
-  gameInterval.clear();
+  gameInterval = null;
   ROCKS.length = 0;
   moveDodger.remove();
   return alert("YOU LOSE!");
