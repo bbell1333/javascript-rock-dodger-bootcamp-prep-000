@@ -90,7 +90,7 @@ function createRock(x) {
  */
 function endGame() {
   gameInterval = null;
-  ROCKS.length = 0;
+  ROCKS.remove();
   moveDodger.removeEventListener("keydown",moveDodger);
   return alert("YOU LOSE!");
 }
