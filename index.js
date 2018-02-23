@@ -137,17 +137,13 @@ function moveDodgerRight() {
    * This function should move DODGER to the right
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
    */
-   function move(el){
-     var right = 0;
-     function step(){
-       el.style.right = `${right+=4}px`;
-       
-       if (right <200){
-         window.requestAnimation(step);
-       }
+   window.requestAnimationFrame(function(){
+     const right = positionToInteger(DODGER.style.left);
+     
+     if (left>0){
+       dodger.style.left = `${left - 4} px`;
      }
-     window.requestionAnimation(step);
-   }
+   })
 }
 
 /**
