@@ -101,17 +101,16 @@ function endGame() {
 }
 
 function moveDodger(e) {
-  const code = e.which
+  
 
-  if ([LEFT_ARROW, RIGHT_ARROW].indexOf(code) > -1) {
+  if (e === LEFT_ARROW) {
+    moveDodgerLeft()
     e.preventDefault()
     e.stopPropagation()
-  }
-
-  if (code === LEFT_ARROW) {
-    moveDodgerLeft()
-  } else if (code === RIGHT_ARROW) {
+  } else if (e === RIGHT_ARROW) {
     moveDodgerRight()
+    e.preventDefault()
+    e.stopPropagation()
   }
 }
 
