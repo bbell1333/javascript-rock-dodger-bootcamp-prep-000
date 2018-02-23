@@ -123,7 +123,7 @@ function moveDodgerLeft() {
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
    */
    window.requestAnimationFram(function{
-     const left = 
+     const left = positionToInteger()
    })
 }
 
