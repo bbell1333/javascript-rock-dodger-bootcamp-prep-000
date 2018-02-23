@@ -82,7 +82,7 @@ function createRock(x) {
       return endGame();
     }
     if(top < 400){
-      window.requestAnimationFrame(step);
+      window.requestAnimationFrame(moveRock);
        /**
      * Otherwise, if the rock hasn't reached the bottom of
      * the GAME, we want to move it again.
@@ -90,26 +90,17 @@ function createRock(x) {
     }else{
       rock.remove();
     }
+    window.requestAnimationFram(moveRock);
     /**
      * But if the rock *has* reached the bottom of the GAME,
      * we should remove the rock from the DOM
      */
+     return rock;
   }
 
   // We should kick of the animation of the rock around here
-  function move(el) {
-  var top = 0
+
  
-  function step() {
-    el.style.top = `${top += 2}px`
- 
-    if (top < 400) {
-      window.requestAnimationFrame(step)
-    }
-  }
- 
-  window.requestAnimationFrame(step);
-}
 
   // Add the rock to ROCKS so that we can remove all rocks
   // when there's a collision
@@ -117,6 +108,7 @@ function createRock(x) {
 
   // Finally, return the rock element you've created
   return rock
+  
 }
 
 /**
