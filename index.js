@@ -122,7 +122,7 @@ function moveDodgerLeft() {
    * This function should move DODGER to the left
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
    */
-   window.requestAnimationFrame(function{
+   window.requestAnimationFrame(function(){
      const left = positionToInteger(DODGER.style.left);
      
      
