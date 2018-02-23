@@ -79,7 +79,8 @@ function createRock(x) {
      */
     if (checkCollision(rock)){
       endGame();
-    }else if(top < 400){
+    }
+    if(top < 400){
       window.requestAnimationFrame(step);
        /**
      * Otherwise, if the rock hasn't reached the bottom of
